@@ -8,7 +8,7 @@
 - **Question 4:** The many variants of exec() provide more flexibility. Different programs require different commands. Therefore, these variants provide more arguments such as paths or command arguments to accommodate different purposes.
 - **Question 5:** Wait () returns the ID of the child when it finished executing. //If we attempt to use wait in the child process it will not work as we expect because the wait call is intended for the process to wait for a child forked from it. when I added the wait in the child it appeared like the parent executed first but the child was waiting for a process that did not exist.
 - **Question 6:** The waitpid() call allows the parent to wait for a particular child to finish in case of multiple child processes.
-- **Question 6:** When you use close(STDOUT_FILENO), you close the standard output file descriptor (STDOUT), which means that any subsequent attempts to write to STDOUT, such as using printf() in the example above, will have no effect, and the output will be discarded without being displayed.
-- **Question 6:** NA
+- **Question 7:** When you use close(STDOUT_FILENO), you close the standard output file descriptor (STDOUT), which means that any subsequent attempts to write to STDOUT, such as using printf() in the example above, will have no effect, and the output will be discarded without being displayed.
+- **Question 8:** NA
 
 *********************************************
