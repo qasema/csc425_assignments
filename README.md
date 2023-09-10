@@ -1,5 +1,5 @@
 # csc425_assignments
-/*********************************************
+*********************************************
 
 Your name: Ala Qasem
 Question 1: The variable X is updated by the parent and child, but given that they are two different processes, each process updates it independently they both refer to the original value of x not the updated value by the other process
@@ -11,4 +11,4 @@ Question 6: The waitpid() call allows the parent to wait for a particular child 
 Question 6: //When you use close(STDOUT_FILENO), you close the standard output file descriptor (STDOUT), which means that any subsequent attempts to write to STDOUT, such as using printf() in the example above, will have no effect, and the output will be discarded without being displayed.
 Question 6: NA
 
-*********************************************/
+*********************************************
