@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 int main() {
-  int fd = open("text_file.txt", O_CREAT | O_RDWR, S_IRWXU);
+  int fd = open("text_file.txt", O_CREAT | O_RDWR, 0666);
   if (fd == -1) {
     perror("open");
     exit(1);
@@ -19,7 +19,7 @@ int main() {
   } else if (rc == 0) {
     // Child process
     printf("Child writing to file\n");
-    write(fd, "this is written by childd \n", 26);
+    write(fd, "this is written by child \n", 26);
   } else {
     // Parent process
     printf("Parent writing to file\n");
@@ -32,5 +32,3 @@ int main() {
   close(fd);
   return 0;
 }
-// both child and parent can write on the same opened file in this case  Parent will write first and then wait for the child to finish and write on the same file before it closes the file.
-// if you do cat text_file.txt you can see both text written by parent and child 
