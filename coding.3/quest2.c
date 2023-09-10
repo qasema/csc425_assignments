@@ -1,29 +1,36 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
 #include <fcntl.h>
 #include <sys/wait.h>
+#include <stdlib.h>
 
-int main(int argc, char *argv[]) {
-    int rc = fork();
-    if (rc < 0) {
-        // fork failed
-        fprintf(stderr, "fork failed\n");
-        exit(1);
-    } else if (rc == 0) {
-        // child: redirect standard output to a file
-        close(STDOUT_FILENO);
-        open("./ls_output.txt", O_CREAT | O_WRONLY | O_TRUNC, S_IRWXU);
+int main() {
+  int fd = open("text_file.txt", O_CREAT | O_RDWR, S_IRWXU);
+  if (fd == -1) {
+    perror("open");
+    exit(1);
+  }
 
-        // now exec "ls"...
-        char *myargs[2];
-        myargs[0] = strdup("ls");    // program: ls (list directory contents)
-        myargs[1] = NULL;            // mark end of array
-        execvp(myargs[0], myargs);   // runs "ls"
-    } else {
-        // parent goes down this path (main)
-        int rc_wait = wait(NULL);
-    }
-    return 0;
+  int rc = fork();
+
+  if (rc < 0) {
+    fprintf(stderr, "fork failed\n");
+    exit(1);
+  } else if (rc == 0) {
+    // Child process
+    printf("Child writing to file\n");
+    write(fd, "this is written by childd \n", 26);
+  } else {
+    // Parent process
+    printf("Parent writing to file\n");
+    write(fd, "this is written by parent \n", 26);
+
+    wait(NULL); // Wait for the child to finish
+  }
+
+  // Read file contents
+  close(fd);
+  return 0;
 }
+// both child and parent can write on the same opened file in this case  Parent will write first and then wait for the child to finish and write on the same file before it closes the file.
+// if you do cat text_file.txt you can see both text written by parent and child 
