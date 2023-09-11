@@ -22,3 +22,8 @@ int main() {
 
     return 0;
 }
+/*********************************************
+   name: Ala 
+   Question 7: When you use close(STDOUT_FILENO), you close the standard output file descriptor (STDOUT), which means that any subsequent attempts to write to STDOUT, such as using printf() in the example above, will have no effect, and the output will be discarded without being displayed.
+
+*********************************************/

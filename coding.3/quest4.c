@@ -36,3 +36,8 @@ int main() {
 
     return 0;
 }
+/*********************************************
+   name: Ala 
+   Question 4: The many variants of exec() provide more flexibility. Different programs require different commands. Therefore, these variants provide more arguments such as paths or command arguments to accommodate different purposes.
+
+*********************************************/

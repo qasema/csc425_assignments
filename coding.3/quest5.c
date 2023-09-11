@@ -19,7 +19,8 @@ int main() {
 
     return 0;
 }
-//If we attempt to use wait in the child process it will not work as we expect because the wait call intended to for the process to wait for a child forked from it. 
-// when I added the wait in the child it appeared like the parent executed first but the child was waiting for a process that did not exist. 
+/*********************************************
+   name: Ala 
+   Question 5: Wait () returns the ID of the child when it finished executing. //If we attempt to use wait in the child process it will not work as we expect because the wait call is intended for the process to wait for a child forked from it. when I added the wait in the child it appeared like the parent executed first but the child was waiting for a process that did not exist.
 
-  
+*********************************************/

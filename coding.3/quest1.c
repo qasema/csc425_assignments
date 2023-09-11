@@ -27,3 +27,9 @@ int main() {
 
     return 0;
 }
+
+/*********************************************
+   Name: Ala 
+   Question 1: The variable X is updated by the parent and child, but given that they are two different processes, each process updates it independently they both refer to the original value of x not the updated value by the other process
+
+*********************************************/

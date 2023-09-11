@@ -22,3 +22,8 @@ int main() {
 	
     return 0;
 }
+/*********************************************
+   name: Ala 
+   Question 6: The waitpid() call allows the parent to wait for a particular child to finish in case of multiple child processes.
+
+*********************************************/

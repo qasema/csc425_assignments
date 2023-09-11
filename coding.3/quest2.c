@@ -32,3 +32,8 @@ int main() {
   close(fd);
   return 0;
 }
+/*********************************************
+   name: Ala 
+   Question 2: Both child and parent can write on the same opened file in this case Parent will write first and then wait for the child to finish and write on the same file before it closes the file. if you do cat text_file.txt you can see both text written by the parent and child. 
+
+*********************************************/
