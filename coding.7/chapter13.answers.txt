@@ -1,0 +1,7 @@
+/*********************************************
+Your name: Ala Qasem
+Question 2: total: 7960 megabytes,free: 7078 megabytes. The number add up to the total memory  
+Question 4: <your answer>
+Question 7: <your answer>
+Question 8: <your answer>
+*********************************************/
