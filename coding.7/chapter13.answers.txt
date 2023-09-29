@@ -1,7 +1,10 @@
 /*********************************************
 Your name: Ala Qasem
 Question 2: total: 7960 megabytes,free: 7078 megabytes. The number add up to the total memory  
-Question 4: when runnig the program with a reasonable megabyte argument, and run the free command on a different terminal, I noticed and increase in the total memory usage and decrease in the free memory space. When Killing the program we gain the used memory back(it was freed). But when I running a program with big megabyte argument I got 'Memory allocation failed' error
-Question 7: <your answer>
-Question 8: <your answer>
+Question 4: when runnig the program with a reasonable megabyte argument, and run the free command 
+on a different terminal, I noticed and increase in the total memory usage and decrease in the free memory space.
+When Killing the program we gain the used memory back(it was freed).
+But when I running a program with big megabyte argument I got 'Memory allocation failed' error
+Question 7: I see the shared memory between the process segment (heab, stack and code) with all memory address and permissions. There more entities than stack, heap and code. It look more complex than that.  
+Question 8: I see an increase in the memory used RSS  when I run the program with higher megabyte input. Yes it matches my expectations.
 *********************************************/

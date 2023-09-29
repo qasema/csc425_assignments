@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Memory allocation failed.\n");
         return 1;
     }
-    printf("Running with %lld bytes\n", arr_size);
+    printf("memory size  %lld bytes\n", arr_size);
 
     // Touch each byte in the array
     while (1) {
