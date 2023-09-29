@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "missing memory arg \n");
         exit(1);
     }
-    long long megabytes = atoll(argv[1]);
+    long long megabytes = atoi(argv[1]);
     long long arr_size = megabytes * 1024 * 1024;  // Calculate array size in bytes
     char *arr = (char *)malloc(arr_size);
     if (arr == NULL) {
